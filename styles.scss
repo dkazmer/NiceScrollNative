@@ -1,0 +1,27 @@
+html {
+	scroll-behavior: smooth;
+	scrollbar-width: thin;
+	scrollbar-color: #666 #eee; /* thumb and track color */
+}
+
+body {
+	&::-webkit-scrollbar {	//the scrollbar.
+		width: 6px;
+	}
+	// &::-webkit-scrollbar-button the buttons on the scrollbar (arrows pointing upwards and downwards).
+	&::-webkit-scrollbar-thumb {	//the draggable scrolling handle.
+		background-color: transparent;
+		border-radius: 3px;
+	}
+	&::-webkit-scrollbar-track {	//the track (progress bar) of the scrollbar.
+		background: #eee;
+	}
+	// &::-webkit-scrollbar-track-piece the track (progress bar) NOT covered by the handle.
+	// &::-webkit-scrollbar-corner the bottom corner of the scrollbar, where both horizontal and vertical scrollbars meet.
+	// &::-webkit-resizer the draggable resizing handle that appears at the bottom corner of some elements.
+	&.hover::-webkit-scrollbar-thumb {
+		background-color: #666;
+	}
+
+	overflow-y: scroll;
+}
